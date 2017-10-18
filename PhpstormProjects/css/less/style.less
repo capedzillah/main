@@ -1,0 +1,94 @@
+@import "../../node_modules/normalize.less/normalize.less";
+@import "./clearfix.css";
+
+.page-wrapper {
+    width: 960px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+header {
+    background-color: #212121;
+    width: 100%;
+    height: 90px;
+    .header-logo {
+        float: left;
+        width: auto;
+        position: relative;
+        height: 100%;
+        .logo-handler {
+            height: 40px;
+            position: absolute;
+            top: 50%;
+            margin-top: -20px;
+            p {
+                margin: 0;
+            }
+            .logo-name {
+                font-size: 20px;
+                color: #ffffff;
+            }
+            .logo-city {
+                font-size: 14px;
+                font-weight: 100;
+                letter-spacing: 2.7px;
+                color: #ffffff;
+            }
+        }
+    }
+    .header-navigation {
+        width: auto;
+        height: 90px;
+        float: right;
+        .navigation-list {
+            margin: 0;
+            line-height: 90px;
+            li {
+                display: inline-block;
+                padding-left: 30px;
+                a {
+                    text-decoration: none;
+                    color: #ffffff;
+                }
+            }
+            .request-button {
+                padding: 10px 20px; /* Поля вокруг текста */
+                border-radius: 50px;
+                border: solid 1px #ffffff;
+            }
+        }
+    }
+    .header-language {
+        float: right;
+        height: 90px;
+        padding-left: 30px;
+        a {
+            text-decoration: none;
+        }
+        p {
+            margin: 0;
+            padding: 0 36px;
+            color: #ffffff;
+            line-height: 90px;
+            background-color: #333333;
+        }
+    }
+}
+
+.main-page {
+    .page-information {
+        width: 420px;
+        .page-information-h3 {
+            font-size: 26px;
+            text-align: center;
+            color: #191919;
+            margin: 15px;
+        }
+        .page-information-p {
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 1.5;
+            color: #212121;
+        }
+    }
+}
