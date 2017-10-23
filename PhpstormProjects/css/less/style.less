@@ -1,94 +1,201 @@
 @import "../../node_modules/normalize.less/normalize.less";
 @import "./clearfix.css";
 
+@font-face {
+    font-family: 'Roboto';
+    src: url('../../font/3966.ttf');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 .page-wrapper {
-    width: 960px;
+    width: 936px;
     margin: 0 auto;
-    height: 100%;
 }
 
 header {
     background-color: #212121;
-    width: 100%;
-    height: 90px;
-    .header-logo {
-        float: left;
-        width: auto;
-        position: relative;
-        height: 100%;
-        .logo-handler {
-            height: 40px;
-            position: absolute;
-            top: 50%;
-            margin-top: -20px;
-            p {
-                margin: 0;
-            }
+    height: 100px;
+    display: flex;
+    .page-wrapper {
+        align-items: center;
+        display: flex;
+        a {
+            text-decoration: none;
+        }
+        .header-logo {
             .logo-name {
+                margin: 0;
+                font-family: Roboto;
                 font-size: 20px;
                 color: #ffffff;
             }
             .logo-city {
+                margin: 0;
+                font-family: Roboto;
                 font-size: 14px;
                 font-weight: 100;
-                letter-spacing: 2.7px;
                 color: #ffffff;
+                letter-spacing: 2.7px;
             }
         }
-    }
-    .header-navigation {
-        width: auto;
-        height: 90px;
-        float: right;
         .navigation-list {
+            padding-left: 160px;
             margin: 0;
-            line-height: 90px;
             li {
                 display: inline-block;
-                padding-left: 30px;
+                padding-right: 20px;
                 a {
-                    text-decoration: none;
+                    font-family: Roboto;
+                    font-size: 14px;
+                    letter-spacing: 0.4px;
                     color: #ffffff;
                 }
             }
             .request-button {
-                padding: 10px 20px; /* Поля вокруг текста */
-                border-radius: 50px;
-                border: solid 1px #ffffff;
+                border: 1px solid white;
+                padding: 12px 28px;
+                border-radius: 90px;
             }
-        }
-    }
-    .header-language {
-        float: right;
-        height: 90px;
-        padding-left: 30px;
-        a {
-            text-decoration: none;
-        }
-        p {
-            margin: 0;
-            padding: 0 36px;
-            color: #ffffff;
-            line-height: 90px;
-            background-color: #333333;
+            .language-button {
+                padding: 0;
+                a {
+                    background-color: #333333;
+                    padding: 41px 35px;
+                }
+            }
         }
     }
 }
 
 .main-page {
-    .page-information {
-        width: 420px;
-        .page-information-h3 {
-            font-size: 26px;
-            text-align: center;
-            color: #191919;
-            margin: 15px;
+    width: 100%;
+    .page-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .page-information {
+            width: 410px;
+            .page-information-h3 {
+                font-family: Roboto;
+                font-size: 36px;
+                font-weight: 500;
+                text-align: center;
+                color: #212121;
+                margin: 0;
+            }
+            .page-information-p {
+                font-family: Roboto;
+                font-size: 20px;
+                font-weight: 300;
+                line-height: 1.5;
+                text-align: left;
+                color: #212121;
+                margin: 15px 0 24px 0;
+            }
+            .page-information-button {
+                background-image: linear-gradient(282deg, #da2a30, #fbc16c);
+                box-shadow: 0 12px 50px 0 rgba(222, 60, 55, 0.32), 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+                padding: 15px 69px;
+                border-radius: 90px;
+                border: 0;
+                color: white;
+            }
         }
-        .page-information-p {
-            font-size: 20px;
-            font-weight: 300;
-            line-height: 1.5;
-            color: #212121;
+        .page-image {
+            background-image: linear-gradient(282deg, #da2a30, #fbc16c);
+            box-shadow: 0 12px 50px 0 rgba(222, 60, 55, 0.32), 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+            width: 510px;
+            height: 580px;
+            border: 0;
+        }
+    }
+}
+
+.about-block {
+    margin-top: 80px;
+    width: auto;
+    height: 550px;
+    background-image: url('../../img/wow.jpg');
+    background-position: center center;
+    display: flex;
+    .page-wrapper {
+        display: flex;
+        flex-direction: row-reverse;
+        .about-wrapper {
+            width: 490px;
+            backdrop-filter: blur(4px);
+            background-color: rgba(0, 0, 0, 0.54);
+            .about-content {
+                padding: 34px 40px;
+                h3 {
+                    margin: 0;
+                    font-family: Roboto;
+                    font-size: 30px;
+                    font-weight: 500;
+                    color: #ffffff;
+                }
+                p {
+                    margin: 30px 0 0 0;
+                    font-family: Roboto;
+                    font-size: 16px;
+                    line-height: 1.88;
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+}
+
+.photos-block {
+    margin-top: 74px;
+    .page-wrapper {
+        h3 {
+            margin: 0;
+            font-family: Roboto;
+            font-size: 30px;
+            font-weight: 500;
+            color: #db3032;
+        }
+        .photos-wrapper {
+            display: flex;
+            align-items: center;
+            .photos-holder {
+                width: 630px;
+                margin-bottom: 80px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                .photo {
+                    margin-top: 30px;
+                    width: 190px;
+                    height: 190px;
+                }
+            }
+        }
+        .photos-information {
+            margin: 25.5px;
+
+            pre {
+                text-align: center;
+                font-family: Roboto;
+                font-size: 20px;
+                color: #191919;
+            }
+            button {
+                display: block;
+                margin: 0 auto;
+                border: 1px solid orange;
+                background-color: white;
+                padding: 14px 41px;
+                border-radius: 90px;
+                font-family: Roboto;
+                font-size: 18px;
+                font-weight: 500;
+                text-align: center;
+                color: #ec7b51;
+            }
         }
     }
 }
