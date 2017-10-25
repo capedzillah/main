@@ -4,25 +4,28 @@
 	<link rel="stylesheet" href="css/build/style.css">
 	<meta charset="UTF-8">
 	<title>Alina Salon</title>
+	<script src="js/jquery-3.2.1.min.js"></script>
 </head>
 <body>
 <header>
 	<div class="page-wrapper">
-		<a href="#">
-			<div class="header-logo">
+		<div class="header-logo">
+			<a href="#">
 				<p class="logo-name">Alina Salon</p>
 				<p class="logo-city">BARCELONA</p>
-			</div>
-		</a>
-		<ul class="navigation-list">
-			<li><a href="#">About us</a></li>
-			<li><a href="#">Services</a></li>
-			<li><a href="#">Promotions</a></li>
-			<li><a href="#">Gallery</a></li>
-			<li><a href="#">Contacts</a></li>
-			<li><a href="#" class="request-button">Request call</a></li>
-			<li class="language-button"><a href="#">EN</a></li>
-		</ul>
+			</a>
+		</div>
+		<div class="header-list">
+			<ul class="navigation-list">
+				<li><a href="#">About us</a></li>
+				<li><a href="#">Services</a></li>
+				<li><a href="#">Promotions</a></li>
+				<li><a href="#">Gallery</a></li>
+				<li><a href="#">Contacts</a></li>
+				<li><a href="#" class="request-button">Request call</a></li>
+				<li class="language-button"><a href="#">EN</a></li>
+			</ul>
+		</div>
 	</div>
 </header>
 <div class="main-page">
@@ -63,12 +66,12 @@ as well as manicure and other</pre>
 		<hr>
 		<div class="photos-wrapper">
 			<div class="photos-holder">
-				<img src="#" class="photo">
-				<img src="#" class="photo">
-				<img src="#" class="photo">
-				<img src="#" class="photo">
-				<img src="#" class="photo">
-				<img src="#" class="photo">
+				<a href="#"><img src="img/1.jpg" class="photo"></a>
+				<a href="#"><img src="img/2.jpg" class="photo"></a>
+				<a href="#"><img src="img/3.jpg" class="photo"></a>
+				<a href="#"><img src="img/4.jpg" class="photo"></a>
+				<a href="#"><img src="img/5.jpg" class="photo"></a>
+				<a href="#"><img src="img/6.jpg" class="photo"></a>
 			</div>
 			<div class="photos-information">
 				<pre>More photos you can
@@ -82,7 +85,107 @@ find on our page in instagramm</pre>
 	<div class="page-wrapper">
 		<h3>Services</h3>
 		<hr>
+		<div class="services-wrapper">
+			<div class="services-holder">
+				<div class="service"><p>Nails</p></div>
+				<div class="service"><p>Eyebrows & eyelashes</p></div>
+				<div class="service"><p>Makeup</p></div>
+				<div class="service"><p>Waxing</p></div>
+				<div class="service"><p>Laser depilation</p></div>
+				<div class="service"><p>Massages</p></div>
+			</div>
+		</div>
+		<div class="services-list">
+			<p>SERVICE NAME</p>
+			<div class="list-item">
+				<div class="item-name">Laser depilation of legs using wax</div>
+				<div class="item-price">€450</div>
+			</div>
+			<hr>
+			<div class="list-item">
+				<div class="item-name">Bigote</div>
+				<div class="item-price">€10</div>
+			</div>
+			<hr>
+			<div class="list-item">
+				<div class="item-name">Ingles completes</div>
+				<div class="item-price">€5</div>
+			</div>
+			<hr>
+			<div class="list-item">
+				<div class="item-name">Coating with varnish</div>
+				<div class="item-price">€8</div>
+			</div>
+			<hr>
+			<div class="list-item">
+				<div class="item-name">Long-term coverage</div>
+				<div class="item-price">€18</div>
+			</div>
+			<hr>
+			<div class="list-item">
+				<div class="item-name">French manicure</div>
+				<div class="item-price">€22</div>
+			</div>
+		</div>
 	</div>
 </div>
+<div class="promotions-block">
+	<div class="page-wrapper">
+		<h3>Promotions</h3>
+		<hr>
+		<div class="promotions-wrapper">
+			<div class="promotions-holder">
+				<div class="promotion"><img src="#"></div>
+				<div class="promotion"><img src="#"></div>
+				<div class="promotion"><img src="#"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="contact-block">
+	<div class="contact-holder">
+		<h1>Contact Us</h1>
+		<form>
+			<input type="text" placeholder="Email" class="contacts">
+			<input type="text" placeholder="Name" class="contacts">
+			<textarea placeholder="Name" class="message"></textarea>
+			<input type="submit" value="SUBMIT" class="submit">
+		</form>
+	</div>
+</div>
+<footer>
+	<div class="footer-holder">
+		<a href="#">
+			<h3>Alina Salon</h3>
+			<h4>BARCELONA</h4>
+		</a>
+		<div class="social">
+			<a href="#" class="facebook">facebook</a>
+			<a href="#" class="twitter">twitter</a>
+			<a href="#" class="instagram">instagram</a>
+		</div>
+	</div>
+</footer>
+<a href="#" class="scrollToTop"></a>
 </body>
+<script>
+	$(document).ready(function () {
+
+		//Check to see if the window is top if not then display button
+		$(window).scroll(function () {
+			if ($(this).scrollTop() > 100) {
+				$('.scrollToTop').fadeIn();
+			} else {
+				$('.scrollToTop').fadeOut();
+			}
+		});
+
+		//Click event to scroll to top
+		$('.scrollToTop').click(function () {
+			$('html, body').animate({scrollTop: 0}, 800);
+			return false;
+		});
+
+	});
+</script>
 </html>
