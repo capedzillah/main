@@ -7,6 +7,17 @@
 	<script src="js/jquery-3.2.1.min.js"></script>
 </head>
 <body>
+<div class="modal" id="myModal">
+	<div class="modal-content">
+		<span class="close">X</span>
+		<h1>Request call</h1>
+		<form>
+			<input type="text" placeholder="You name" class="text-input">
+			<input type="text" placeholder="You phone" class="text-input">
+			<input type="submit" value="SUBMIT" class="submit">
+		</form>
+	</div>
+</div>
 <header>
 	<div class="page-wrapper">
 		<div class="header-logo">
@@ -22,7 +33,7 @@
 				<li><a href="#">Promotions</a></li>
 				<li><a href="#">Gallery</a></li>
 				<li><a href="#">Contacts</a></li>
-				<li><a href="#" class="request-button">Request call</a></li>
+				<li><a href="#" id="modal-button" class="request-button">Request call</a></li>
 				<li class="language-button"><a href="#">EN</a></li>
 			</ul>
 		</div>
@@ -170,8 +181,6 @@ find on our page in instagramm</pre>
 </body>
 <script>
 	$(document).ready(function () {
-
-		//Check to see if the window is top if not then display button
 		$(window).scroll(function () {
 			if ($(this).scrollTop() > 100) {
 				$('.scrollToTop').fadeIn();
@@ -179,13 +188,25 @@ find on our page in instagramm</pre>
 				$('.scrollToTop').fadeOut();
 			}
 		});
-
-		//Click event to scroll to top
 		$('.scrollToTop').click(function () {
 			$('html, body').animate({scrollTop: 0}, 800);
 			return false;
 		});
-
 	});
+
+	var modal = document.getElementById('myModal');
+	var btn = document.getElementById("modal-button");
+	var span = document.getElementsByClassName("close")[0];
+	btn.onclick = function() {
+		modal.style.display = "block";
+	}
+	span.onclick = function() {
+		modal.style.display = "none";
+	}
+	window.onclick = function(event) {
+		if (event.target == modal) {
+			modal.style.display = "none";
+		}
+	}
 </script>
 </html>

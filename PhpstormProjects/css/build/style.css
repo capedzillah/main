@@ -630,7 +630,7 @@ header .page-wrapper .navigation-list .language-button a {
 }
 .services-block {
   padding-top: 74px;
-  padding-bottom: 27px;
+  padding-bottom: 60px;
   background-color: #fafafa;
 }
 .services-block .page-wrapper h3 {
@@ -742,7 +742,7 @@ header .page-wrapper .navigation-list .language-button a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 24px 0 18px;
+  margin: 26px 0 0px;
 }
 .services-block .page-wrapper .services-list .item-name {
   font-family: Roboto;
@@ -802,7 +802,7 @@ header .page-wrapper .navigation-list .language-button a {
 }
 .contact-block .contact-holder {
   width: 500px;
-  margin: 80px auto;
+  margin: 73px auto 40px auto;
 }
 .contact-block .contact-holder h1 {
   font-family: Roboto;
@@ -810,6 +810,7 @@ header .page-wrapper .navigation-list .language-button a {
   font-weight: 500;
   color: #ffffff;
   text-align: center;
+  margin: 73px 0 58px 0;
 }
 .contact-block .contact-holder form {
   z-index: 10;
@@ -823,7 +824,7 @@ header .page-wrapper .navigation-list .language-button a {
   border-width: 2px;
   border-image-source: linear-gradient(96deg, #fbc16c, #da2a30);
   border-image-slice: 1;
-  margin-bottom: 32px;
+  margin-bottom: 22px;
   padding-left: 22px;
   font-family: Roboto;
   font-size: 16px;
@@ -849,7 +850,7 @@ header .page-wrapper .navigation-list .language-button a {
 }
 .contact-block .contact-holder form .submit {
   display: block;
-  margin: 32px auto 0;
+  margin: 10px auto 0;
   padding: 14px 85px;
   border-radius: 100px;
   background-image: -o-linear-gradient(348deg, #fbc16c, #da2a30);
@@ -872,7 +873,7 @@ footer .footer-holder {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 20px auto;
+  margin: 24px auto;
 }
 footer .footer-holder a {
   text-decoration: none;
@@ -895,6 +896,7 @@ footer .footer-holder h4 {
 }
 footer .footer-holder .social {
   margin: 0 auto;
+  margin-top: 5px;
 }
 footer .footer-holder .social .facebook {
   background-image: url(../../img/spritesheet.png);
@@ -945,4 +947,86 @@ footer .footer-holder .social .instagram:hover {
 }
 .scrollToTop:hover {
   text-decoration: none;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 150px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #000000;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.modal .modal-content {
+  position: relative;
+  margin: auto;
+  width: 478px;
+  height: 438px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 16px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 1px 8px 16px 0 rgba(0, 0, 0, 0.32);
+          box-shadow: 1px 8px 16px 0 rgba(0, 0, 0, 0.32);
+  border: solid 1px #979797;
+}
+.modal .modal-content span {
+  width: 16px;
+  height: 16px;
+  display: block;
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  font-size: 0;
+  background-image: url(../../img/fill-1.png);
+  cursor: pointer;
+}
+.modal .modal-content h1 {
+  font-family: Roboto;
+  font-size: 30px;
+  font-weight: 500;
+  text-align: left;
+  color: #db3032;
+  margin-top: 58px;
+  margin-left: 63px;
+  margin-bottom: 25px;
+}
+.modal .modal-content .text-input {
+  width: 324px;
+  height: 50px;
+  display: block;
+  padding-left: 22px;
+  margin: 0 auto;
+  margin-bottom: 32px;
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.34);
+  border-style: solid;
+  border-width: 2px;
+  border-image-source: linear-gradient(99deg, #fbc16c, #da2a30);
+  border-image-slice: 1;
+  font-size: 16px;
+  font-weight: 300;
+  text-align: left;
+  color: #b6b6b6;
+}
+.modal .modal-content .submit {
+  display: block;
+  padding: 14px 81px;
+  margin: 0 auto;
+  margin-top: 64px;
+  border-radius: 100px;
+  border: none;
+  background-image: -o-linear-gradient(168deg, #da2a30, #fbc16c);
+  background-image: linear-gradient(282deg, #da2a30, #fbc16c);
+  -webkit-box-shadow: 0 12px 50px 0 rgba(222, 60, 55, 0.32), 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 12px 50px 0 rgba(222, 60, 55, 0.32), 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  color: #ffffff;
 }
