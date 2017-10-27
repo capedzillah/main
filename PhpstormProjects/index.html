@@ -143,12 +143,29 @@ find on our page in instagramm</pre>
 <div class="promotions-block">
 	<div class="page-wrapper">
 		<h3>Promotions</h3>
+		<div class="promotion-slider">
+			<span class="slide-left">left</span>
+			<span class="slide-right">right</span>
+		</div>
 		<hr>
 		<div class="promotions-wrapper">
 			<div class="promotions-holder">
-				<div class="promotion"><img src="#"></div>
-				<div class="promotion"><img src="#"></div>
-				<div class="promotion"><img src="#"></div>
+				<div class="promotion"><img src="#">
+					<h1>French</h1>
+					<h2>Manicure</h2><span>Up to 27.09.2017</span>
+					<button>€15</button>
+				</div>
+				<div class="promotion"><img src="#">
+					<span class="service-type">Pedicure</span>
+					<span class="service-date">Up to 10.11.2017</span>
+					<button>€9</button>
+				</div>
+				<div class="promotion"><img src="#">
+					<h1>WOMENS</h1>
+					<h2>haircut</h2>
+					<span>Up to 27.09.2017</span>
+					<button>€35</button>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -197,13 +214,13 @@ find on our page in instagramm</pre>
 	var modal = document.getElementById('myModal');
 	var btn = document.getElementById("modal-button");
 	var span = document.getElementsByClassName("close")[0];
-	btn.onclick = function() {
+	btn.onclick = function () {
 		modal.style.display = "block";
 	}
-	span.onclick = function() {
+	span.onclick = function () {
 		modal.style.display = "none";
 	}
-	window.onclick = function(event) {
+	window.onclick = function (event) {
 		if (event.target == modal) {
 			modal.style.display = "none";
 		}

@@ -322,6 +322,7 @@ header {
     margin-bottom: 80px;
     background-color: #FDFDFD;
     .page-wrapper {
+        position: relative;
         h3 {
             font-family: Roboto;
             font-size: 30px;
@@ -329,31 +330,167 @@ header {
             color: #db3032;
             margin: 0;
         }
+        .promotion-slider {
+            position: absolute;
+            right: 20px;
+            top: 0;
+            .slide-left {
+                font-size: 0px;
+                width: 14px;
+                height: 15px;
+                display: inline-block;
+                background-image: url(../../img/arrow-left.png);
+                cursor: pointer;
+                margin-right: 20px;
+            }
+            .slide-right {
+                font-size: 0px;
+                width: 14px;
+                height: 15px;
+                display: inline-block;
+                background-image: url(../../img/arrow-right.png);
+                cursor: pointer;
+            }
+        }
         .promotions-wrapper {
             margin-top: 37px;
             .promotions-holder {
                 display: flex;
                 justify-content: space-between;
                 .promotion {
+                    width: 300px;
                     height: 184px;
                     background: white;
                 }
                 .promotion:nth-child(1) {
+                    position: relative;
+                    background-color: #FFFFFF;
+                    box-shadow: 0 12px 24px 0 rgba(134, 134, 134, 0.12);
                     img {
                         width: 172px;
                         height: 179px;
+                        float: left;
+                    }
+                    h1 {
+                        margin: 0;
+                        margin-top: 26px;
+                        font-family: Roboto;
+                        font-weight: bold;
+                        color: #db3032;
+                    }
+                    h2 {
+                        font-family: Roboto;
+                        font-size: 24px;
+                        font-weight: 300;
+                        color: #373737;
+                        margin: 0;
+                        margin-bottom: 12px;
+                    }
+                    span {
+                        font-family: Roboto;
+                        font-size: 14px;
+                        font-weight: 300;
+                        color: #8d8d8d;
+                    }
+                    button {
+                        position: absolute;
+                        bottom: 16px;
+                        right: 16px;
+                        display: block;
+                        border-radius: 100px;
+                        background-image: linear-gradient(116deg, #fbc16c, #da2a30);
+                        box-shadow: 0 12px 18px 0 rgba(222, 60, 55, 0.32), 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+                        font-family: Roboto;
+                        font-size: 24px;
+                        color: #ffffff;
+                        border: none;
+                        padding: 6px 21px;
+                        cursor: pointer;
                     }
                 }
                 .promotion:nth-child(2) {
+                    position: relative;
+                    background-color: #FFFFFF;
+                    box-shadow: 0 12px 24px 0 rgba(134, 134, 134, 0.12);
                     img {
                         width: 265px;
                         height: 118px;
+                        margin-bottom: 19px;
+                    }
+                    .service-type {
+                        font-family: Roboto;
+                        font-size: 24px;
+                        font-weight: bold;
+                        color: #db3032;
+                        margin: 0 35px 0 24px;
+                    }
+                    .service-date {
+                        font-family: Roboto;
+                        font-size: 14px;
+                        font-weight: 300;
+                        color: #8d8d8d;
+                    }
+                    button {
+                        position: absolute;
+                        font-family: Roboto;
+                        font-size: 30px;
+                        font-weight: bold;
+                        color: #ffffff;
+                        border-radius: 100px;
+                        background-image: linear-gradient(135deg, #fbc16c, #da2a30);
+                        box-shadow: 0 12px 18px 0 rgba(222, 60, 55, 0.32), 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+                        border: none;
+                        padding: 23px;
+                        top: 20px;
+                        left: 20px;
+                        cursor: pointer;
                     }
                 }
                 .promotion:nth-child(3) {
+                    background-color: #FFFFFF;
+                    box-shadow: 0 12px 24px 0 rgba(134, 134, 134, 0.12);
                     img {
                         width: 137px;
                         height: 161px;
+                        float: right;
+                    }
+                    h1 {
+                        margin: 0;
+                        margin-top: 27px;
+                        margin-left: 22px;
+                        font-family: Roboto;
+                        font-size: 24px;
+                        font-weight: 300;
+                        color: #db3032;
+                    }
+                    h2 {
+                        font-family: Roboto;
+                        font-size: 24px;
+                        font-weight: 300;
+                        color: #373737;
+                        margin: 0;
+                        margin-bottom: 12px;
+                        margin-left: 22px;
+
+                    }
+                    span {
+                        font-family: Roboto;
+                        font-size: 14px;
+                        font-weight: 300;
+                        color: #8d8d8d;
+                        margin-left: 22px;
+                    }
+                    button {
+                        margin-top: 16px;
+                        border-radius: 0 100px 100px 0;
+                        background-image: linear-gradient(114deg, #fbc16c, #da2a30);
+                        box-shadow: 0 12px 18px 0 rgba(222, 60, 55, 0.32), 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+                        border: none;
+                        padding: 7px 31px 7px 23px;
+                        font-family: Roboto;
+                        font-size: 24px;
+                        color: #ffffff;
+                        cursor: pointer;
                     }
                 }
             }
@@ -458,7 +595,7 @@ footer {
         }
         .social {
             margin: 0 auto;
-            margin-top:5px;
+            margin-top: 5px;
             .facebook {
                 background-image: url(../../img/spritesheet.png);
                 background-repeat: no-repeat;
@@ -546,7 +683,7 @@ footer {
             top: 32px;
             font-size: 0;
             background-image: url(../../img/fill-1.png);
-            cursor:pointer;
+            cursor: pointer;
         }
         h1 {
             font-family: Roboto;
@@ -592,4 +729,11 @@ footer {
             color: #ffffff;
         }
     }
+}
+
+@media (max-width: 575px) {
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+
 }
