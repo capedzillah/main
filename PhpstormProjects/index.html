@@ -7,17 +7,6 @@
 	<script src="js/jquery-3.2.1.min.js"></script>
 </head>
 <body>
-<div class="modal" id="myModal">
-	<div class="modal-content">
-		<span class="close">X</span>
-		<h1>Request call</h1>
-		<form>
-			<input type="text" placeholder="You name" class="text-input">
-			<input type="text" placeholder="You phone" class="text-input">
-			<input type="submit" value="SUBMIT" class="submit">
-		</form>
-	</div>
-</div>
 <header>
 	<div class="page-wrapper">
 		<div class="header-logo">
@@ -43,9 +32,9 @@
 	<div class="page-wrapper">
 		<div class="page-information">
 			<h3 class="page-information-h3">The best for your beauty!</h3>
-			<pre class="page-information-p">We are the best beauty salon in Spain
+			<p class="page-information-p">We are the best beauty salon in Spain
 We do all kinds of haircut services,
-as well as manicure and other</pre>
+as well as manicure and other</p>
 			<button class="page-information-button">CONTACT US</button>
 		</div>
 		<img src="#" alt="sorry" class="page-image"/>
@@ -56,9 +45,7 @@ as well as manicure and other</pre>
 		<div class="about-wrapper">
 			<div class="about-content">
 				<h3>About us</h3>
-				<hr>
-				<p>
-					Nulla eleifend, augue eu convallis volutpat, diam nisi luctus libero, laoreet ultrices nibh ligula
+				<p>Nulla eleifend, augue eu convallis volutpat, diam nisi luctus libero, laoreet ultrices nibh ligula
 					id felis. Suspendisse venenatis rutrum felis, ut hendrerit libero volutpat vitae. Vivamus aliquet
 					nisl quis efficitur sollicitudin. Nunc pulvinar justo lorem, vel dignissim est posuere ac. Sed
 					pharetra porttitor justo sit amet ultricies. Ut purus nisi, sollicitudin eget ligula sit amet,
@@ -74,7 +61,6 @@ as well as manicure and other</pre>
 <div class="photos-block">
 	<div class="page-wrapper">
 		<h3>Photo</h3>
-		<hr>
 		<div class="photos-wrapper">
 			<div class="photos-holder">
 				<a href="#"><img src="img/1.jpg" class="photo"></a>
@@ -95,7 +81,6 @@ find on our page in instagramm</pre>
 <div class="services-block">
 	<div class="page-wrapper">
 		<h3>Services</h3>
-		<hr>
 		<div class="services-wrapper">
 			<div class="services-holder">
 				<div class="service"><p>Nails</p></div>
@@ -112,27 +97,22 @@ find on our page in instagramm</pre>
 				<div class="item-name">Laser depilation of legs using wax</div>
 				<div class="item-price">€450</div>
 			</div>
-			<hr>
 			<div class="list-item">
 				<div class="item-name">Bigote</div>
 				<div class="item-price">€10</div>
 			</div>
-			<hr>
 			<div class="list-item">
 				<div class="item-name">Ingles completes</div>
 				<div class="item-price">€5</div>
 			</div>
-			<hr>
 			<div class="list-item">
 				<div class="item-name">Coating with varnish</div>
 				<div class="item-price">€8</div>
 			</div>
-			<hr>
 			<div class="list-item">
 				<div class="item-name">Long-term coverage</div>
 				<div class="item-price">€18</div>
 			</div>
-			<hr>
 			<div class="list-item">
 				<div class="item-name">French manicure</div>
 				<div class="item-price">€22</div>
@@ -147,7 +127,6 @@ find on our page in instagramm</pre>
 			<span class="slide-left">left</span>
 			<span class="slide-right">right</span>
 		</div>
-		<hr>
 		<div class="promotions-wrapper">
 			<div class="promotions-holder">
 				<div class="promotion"><img src="#">
@@ -195,7 +174,17 @@ find on our page in instagramm</pre>
 	</div>
 </footer>
 <a href="#" class="scrollToTop"></a>
-</body>
+<div class="modal" id="myModal">
+	<div class="modal-content">
+		<span class="close">X</span>
+		<h1>Request call</h1>
+		<form>
+			<input type="text" placeholder="You name" class="text-input">
+			<input type="text" placeholder="You phone" class="text-input">
+			<input type="submit" value="SUBMIT" class="submit">
+		</form>
+	</div>
+</div>
 <script>
 	$(document).ready(function () {
 		$(window).scroll(function () {
@@ -211,19 +200,20 @@ find on our page in instagramm</pre>
 		});
 	});
 
-	var modal = document.getElementById('myModal');
+	var modal = $('#myModal');
 	var btn = document.getElementById("modal-button");
 	var span = document.getElementsByClassName("close")[0];
 	btn.onclick = function () {
-		modal.style.display = "block";
+		modal.fadeIn()
 	}
 	span.onclick = function () {
-		modal.style.display = "none";
+		modal.fadeOut()
 	}
 	window.onclick = function (event) {
-		if (event.target == modal) {
-			modal.style.display = "none";
+		if (event.target == modal[0]) {
+			modal.fadeOut()
 		}
 	}
 </script>
+</body>
 </html>
